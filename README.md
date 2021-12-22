@@ -23,3 +23,5 @@ How to use the app:
 2) Wait for the green block to appear
 3) Click on the green box
 4) See the result of the reaction in ms and the characteristic
+
+![img app](https://ll-testing.ru/F-Up/img/ninja.jpg)
