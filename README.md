@@ -1,5 +1,21 @@
 # ninja-vue
 
+## Table of Contents
+
+- [About](#about)
+- [Usage](#usage)
+
+## About <a name = "about"></a>
+
+![img app](http://test-developer.ru/preview/ninja.jpg)
+
+## Usage <a name = "usage"></a>
+
+1) click on Play
+2) Wait for the green block to appear
+3) Click on the green box
+4) See the result of the reaction in ms and the characteristic
+
 ## Project setup
 ```
 npm install
@@ -15,13 +31,20 @@ npm run serve
 npm run build
 ```
 
-## App on vue 3
 
-How to use the app:
+# ninja-vue
 
-1) click on Play
-2) Wait for the green block to appear
-3) Click on the green box
-4) See the result of the reaction in ms and the characteristic
+## Project setup
+```
+npm install
+```
 
-![img app](https://ll-testing.ru/F-Up/img/ninja.jpg)
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
