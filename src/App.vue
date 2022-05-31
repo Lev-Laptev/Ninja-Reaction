@@ -1,35 +1,45 @@
 <template>
   <h1>Ninja Reaction Timer</h1>
-  <button @click="start" :disabled="isPlaying">Play</button>
-  <Block v-if="isPlaying" :delay="delay" @endGame="endGame"></Block>
-  <Results v-if="showResults" :score="score"></Results>
+  <button
+    @click="start"
+    :disabled="isPlaying"
+  >
+    Play
+  </button>
+  <app-block
+    v-if="isPlaying"
+    :delay="delay"
+    @endGame="endGame"
+  />
+  <app-results
+    v-if="showResults"
+    :score="score"
+  />
 </template>
 
 <script>
-import Block from './components/Block'
-import Results from './components/Results'
+import AppBlock from '@/components/AppBlock'
+import AppResults from '@/components/AppResults'
 
 export default {
-  name: 'App',
+  name: 'AppReaction',
   components: {
-    Block,
-    Results
+    AppBlock,
+    AppResults
   },
-  data() {
-    return {
-      isPlaying: false,
-      delay: null,
-      score: null,
-      showResults: false
-    }
-  },
+  data: () => ({
+    isPlaying: false,
+    delay: null,
+    score: null,
+    showResults: false
+  }),
   methods: {
-    start() {
+    start () {
       this.delay = 2000 + Math.random() * 5000
       this.isPlaying = true
       this.showResults = false
     },
-    endGame(reactionTime) {
+    endGame (reactionTime) {
       this.score = reactionTime
       this.isPlaying = false
       this.showResults = true
@@ -40,24 +50,29 @@ export default {
 
 <style>
 #app {
+  margin-top: 60px;
+
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #444444;
   text-align: center;
-  color: #444;
-  margin-top: 60px;
 }
+
 button {
-  background-color: #0faf87;
-  color: #fff;
-  border: none;
+  margin: 10px;
   padding: 8px 16px;
-  border-radius: 4px;
+
+  color: #ffffff;
   font-size: 16px;
   letter-spacing: 1px;
+
+  background-color: #0faf87;
+  border-radius: 4px;
+  border: none;
   cursor: pointer;
-  margin: 10px;
 }
+
 button:disabled {
   opacity: 0.2;
   cursor: not-allowed;
