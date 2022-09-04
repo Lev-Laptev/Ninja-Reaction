@@ -1,6 +1,8 @@
-# ninja-vue
+# vue-ninja-reaction
 
-### View: [Click](https://vue-ninja-reaction.netlify.app/)
+## Demo
+
+View: [Click](https://vue-ninja-reaction.netlify.app/)
 
 ## Table of Contents
 
